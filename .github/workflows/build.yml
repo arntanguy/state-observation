@@ -46,13 +46,15 @@ jobs:
         compiler: ${{ matrix.compiler }}
         build-type: ${{ matrix.build-type }}
         ubuntu: |
-          apt: libeigen3-dev doxygen doxygen-latex libboost-all-dev
+          apt: libeigen3-dev doxygen doxygen-latex libboost-all-dev libbenchmark-dev
         macos: |
-          brew: eigen boost pkg-config doxygen
+          brew: eigen boost pkg-config doxygen google-benchmark
         windows: |
           github:
             - path: eigenteam/eigen-git-mirror
               ref: 3.3.7
+            - path: google/benchmark
+              ref: 1.6.2
     - name: Build and test
       if: matrix.build-type != 'script'
       uses: jrl-umi3218/github-actions/build-cmake-project@master

@@ -31,7 +31,7 @@ foreach(component ${@PROJECT_NAME@_FIND_COMPONENTS})
         )
         include("${CMAKE_CURRENT_LIST_DIR}/${component}/dependencies.cmake")
 
-        message(FATAL_ERROR "adding include dir ${PACKAGE_PREFIX_DIR}/include for component @PROJECT_NAME@::${component}"
+        message(STATUS "adding include dir ${PACKAGE_PREFIX_DIR}/include for component @PROJECT_NAME@::${component}"
         )
         target_include_directories(@PROJECT_NAME@::${component} INTERFACE ${PACKAGE_PREFIX_DIR}/include)
 

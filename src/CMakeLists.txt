@@ -79,6 +79,7 @@ jrl_target_headers(
   include/state-observation/tools/definitions.hxx
   include/state-observation/tools/hrp2.hpp
   include/state-observation/tools/probability-law-simulation.hpp
+  include/state-observation/tools/probability-law-simulation.hxx
   include/state-observation/tools/miscellaneous-algorithms.hpp
   include/state-observation/tools/rigid-body-kinematics.hpp
   include/state-observation/tools/rigid-body-kinematics.hxx
